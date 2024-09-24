@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: peachpuff;
+    background-color: #f7c6b7;
     color: rgb(146, 33, 33);
 }
 
@@ -121,18 +121,25 @@ form button:hover {
 .projects-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Makes the projects section responsive */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
 .project {
-    background-color: #f7c6b7; /* Match your theme */
+    background-color: #f7c6b7; 
     padding: 20px;
     border-radius: 10px;
     width: 30%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+    footer {
+    background-color: #f7c6b7;
+    padding: 20px;
+    text-align: center;
+}
+ 
+
 
 .project h3 {
     color: rgb(146, 33, 33);
