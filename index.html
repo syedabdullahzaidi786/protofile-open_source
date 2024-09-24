@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protofile</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <h3>Protofile</h3>
+            </div>
+            <ul class="nav-links">
+                <li class="home"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+        <div class="profile-container">
+            <img src="Capture.PNG" alt="Profile Picture" class="profile-pic">
+            <div class="intro-text">
+                <h1 id="h1" style="padding: 10px;">Hello, my name is Muskan</h1>
+                <p style="margin: 15px;">
+                    My name is Muskan, and I am currently pursuing a Bachelor's in Science (BSc). 
+                    <br>I am also a student of the Governor's Initiative for Artificial Intelligence and Cloud (GIAIC), 
+                    <br>organized by the Governor of Sindh, Pakistan, at the Governor House.
+                    <br>I am specializing in Cloud Generative AI and the Metaverse.
+                </p>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="about" style="padding-bottom: 60px; margin-bottom: 40px;">
+            <h2 style="text-align: center; margin-top: 15pc;">About</h2>
+            <p style="text-align: center; margin: 20px;">
+                Hello! My name is Muskan, and I'm currently pursuing a Bachelor's in Science (BSc), 
+                while actively participating in the Governor's Initiative for Artificial Intelligence and Cloud (GIAIC),
+                led by the Governor of Sindh, Pakistan...
+                I am deeply passionate about Cloud Generative AI and the evolving world of the Metaverse, 
+                constantly exploring the intersection of these groundbreaking technologies.
+                 Through my learning journey, 
+                I am continuously honing my knowledge and expanding my expertise in areas such as web development,
+                 artificial intelligence, and the transformative potential of cloud technologies. As I move forward, 
+                 my goal is to leverage these skills to build impactful projects and contribute to the tech landscape.
+            </p>
+        </div>
+
+        <section id="projects">
+            <h2 style="text-align: center; margin-top: 50px;">My Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <h3>Typing Speed Checker (CLI)</h3>
+                        <p>command-line application that allows users to test and improve their typing speed and also give the cli based certifacte.</p>
+                        <a href="https://github.com/muskan-fatim/typing_speed.git" target="_blank">View on GitHub</a>
+
+                    </div>
+                <div class="project">
+                    <h3>Word Counter CLI Application</h3>
+                    <p>A command-line interface tool that counts words, providing users with a simple way to analyze text.</p>
+                    <a href="https://github.com/muskan-fatim/word_counter.git" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>Snake Water Gun Game</h3>
+                    <p>A fun and interactive game that lets users play the classic snake, water, and gun game online.</p>
+                    <a href="https://github.com/muskan-fatim/Fisrt-web-game.git" target="_blank">View on GitHub</a>
+                    <a href="https://snake-water-gun-game-three.vercel.app/" target="_blank">check live demo</a>
+
+                </div>
+                <div class="project">
+                    <h3>Resume Builder</h3>
+                    <p>A web application that allows users to create, edit, and download resumes with a simple user interface.</p>
+                    <a href="https://github.com/muskan-fatim/Resum-genreater.git" target="_blank">View on GitHub</a>
+                    <a href="https://resum-genreater.vercel.app/" target="_blank">check live demo</a>
+
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h2 style="text-align: center; margin-top: 50px;">Contact Us</h2>
+            <div class="contact-container">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+       
+        
+        
+    </footer>
+
+    <script>
+        setInterval(() => {
+            document.getElementById("h1").innerHTML = "Hello, My name is Muskan";
+        }, 1000);
+
+        setInterval(() => {
+            document.getElementById("h1").innerHTML = "I am a frontend developer";
+        }, 2000);
+
+        setInterval(() => {
+            document.getElementById("h1").innerHTML = "I am a web developer";
+        }, 3000);
+    </script>
+</body>
+</html>

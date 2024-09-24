@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: peachpuff;
+    color: rgb(146, 33, 33);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links li a {
+    color: rgb(146, 33, 33);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: flex-start; /* Aligns the content to the left side */
+    align-items: center;
+    padding: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px; /* Adds margin to the right side to space it from the text */
+    border: 4px solid #923121;
+}
+
+.intro-text {
+    text-align: left; /* Aligns the text to the left side */
+    max-width: 600px;
+}
+#contact {
+    background-color: #f7c6b7; /* Light peach background for consistency */
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 15px;
+    font-size: 18px;
+    color: rgb(146, 33, 33);
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(146, 33, 33);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #923121; /* Darker red on hover */
+}
+#projects {
+    background-color: #e7f3ff; /* Light blue background for contrast */
+    padding: 40px 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Makes the projects section responsive */
+    gap: 20px;
+}
+
+.project {
+    background-color: #f7c6b7; /* Match your theme */
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project h3 {
+    color: rgb(146, 33, 33);
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 16px;
+    color: #333;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: rgb(146, 33, 33);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.project a:hover {
+    background-color: #923121; 
+}
+
+
+
+
+
+
+footer {
+    background-color: #f7c6b7;
+    padding: 20px;
+    text-align: center;
+}
