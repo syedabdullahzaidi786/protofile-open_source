@@ -37,6 +37,3 @@ If you have any questions or would like to get in touch, feel free to reach out 
 - Email: mushiifatima3456@gmail.com
 - LinkedIn: https://www.linkedin.com/in/muskan-fatima-ab90732b7/
 
-### Notes:
-- Replace `yourusername`, `your.email@example.com`, and other placeholder text with your actual information.
-- Adjust sections based on any additional features or details you want to include.
