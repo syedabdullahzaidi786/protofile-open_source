@@ -6,23 +6,37 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: false
     });
 
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('theme-switch').checked = savedTheme === 'dark';
+    }
+
+    // Theme switch event listener
+    document.getElementById('theme-switch').addEventListener('change', function() {
+        const theme = this.checked ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    });
+
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
     if (hamburger) {
         hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
             navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
     }
     
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll('.nav-links li a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
             navLinks.classList.remove('active');
-        });
+            hamburger.classList.remove('active');
+        }
     });
 
     // Typing Animation
@@ -92,9 +106,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (scrollToTopBtn) {
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
-                scrollToTopBtn.classList.add('visible');
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.transform = 'translateY(0)';
             } else {
-                scrollToTopBtn.classList.remove('visible');
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.transform = 'translateY(20px)';
             }
         });
         
@@ -105,6 +121,26 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    });
 
     // Form validation
     const contactForm = document.getElementById('contactForm');
@@ -166,30 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>Thank you for reaching out. I'll get back to you soon.</p>
                     </div>
                 `;
-            }
-        });
-    }
-
-    // Theme toggle
-    const themeSwitch = document.getElementById('theme-switch');
-    
-    if (themeSwitch) {
-        // Check for saved theme preference or prefer-color-scheme
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const savedTheme = localStorage.getItem('theme');
-        
-        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-            document.body.classList.add('dark-theme');
-            themeSwitch.checked = true;
-        }
-        
-        themeSwitch.addEventListener('change', function() {
-            if (this.checked) {
-                document.body.classList.add('dark-theme');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.body.classList.remove('dark-theme');
-                localStorage.setItem('theme', 'light');
             }
         });
     }
